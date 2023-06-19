@@ -1,0 +1,15 @@
+- name: install nginx using the ansible
+  hosts: cloudque
+  become: true
+  tasks:
+    - name: update cache
+      apt:
+        update_cache: yes
+    - name: install nginx
+      apt:
+        name: nginx
+        state: present
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
