@@ -1,0 +1,6 @@
+- name: Restart the Kubernetes pods
+  hosts: cloudque
+  become: true
+  tasks:
+     - name: Copy and Execute the script 
+       command: "sh /opt/api.sh"
