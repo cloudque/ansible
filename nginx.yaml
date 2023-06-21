@@ -1,5 +1,5 @@
 - name: install nginx using the ansible
-  hosts: cloudque
+  hosts: ram
   become: true
   tasks:
     - name: update cache
